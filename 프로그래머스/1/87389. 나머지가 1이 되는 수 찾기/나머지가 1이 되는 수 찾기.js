@@ -1,9 +1,4 @@
 function solution(n) {
-    var answer = 1;
-    
-    while(true){
-        if(n%answer===1) break;
-        else answer++;
-    }
+    var answer = 0;
     return answer;
 }
