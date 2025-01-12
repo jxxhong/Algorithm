@@ -5,8 +5,9 @@ function solution(N, stages) {
     
     for(let i = 1; i <= N; i++) {
         n = stages.filter((a) => a >= i).length    
-        if((stages.filter((a) => a === i)).length !== 0)
-            arr.push(parseFloat(stages.filter((a) => a === i).length / n))
+        let k = stages.filter((a) => a === i)
+        if(k.length !== 0)
+            arr.push(parseFloat(k.length / n))
         else arr.push(0)
     }
     
