@@ -1,16 +1,13 @@
 function solution(arr1, arr2) {
     var answer = [];
     for(let i = 0; i < arr1.length; i++) {
-        answer.push(Array(arr2[0].length).fill(0));
+        answer.push(Array(arr2[0].length).fill(0))
     }
     
-    answer.map((a, i)=>{
-        a.map((b, j)=>{
-            for(let c = 0; c < arr2.length; c++) {
-                answer[i][j] += arr1[i][c] * arr2[c][j];
-            }
-        })
-    })
-    
+    for(let j = 0; j < arr1.length; j++) {    
+        for(let k = 0; k < arr2[0].length; k++) {
+            answer[j][k] += arr1[j][k] + arr2[j][k]
+        }
+    }
     return answer;
 }
